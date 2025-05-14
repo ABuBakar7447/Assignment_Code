@@ -3,15 +3,17 @@
 // Example: Happy New Year
 
 {
-  function isLeapYear(year: number): boolean {
-    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  function isLeapYear(year: number): string {
+    if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
+      return "Happy New Year"
+    }
+    else{
+      return "This is not a leap year"
+    }
+    
   }
 
-  // Example usage:
   const year = 2028;
-  if (isLeapYear(year)) {
-    console.log("Happy New Year");
-  } else {
-    console.log("This is not a leap year");
-  }
+  console.log(isLeapYear(year));
+  
 }
